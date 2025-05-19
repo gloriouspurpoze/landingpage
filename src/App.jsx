@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Partners from "./components/Partners";
 import FeaturesSection from "./components/FeaturesSection";
+import LiveDemoAndIntegrations from "./components/DemoAndIntegrations"; 
+import ReviewsSection from "./components/Reviews";
+import PricingSection from "./components/Pricing";
 const App = () => {
   return (
     <>
@@ -11,6 +14,9 @@ const App = () => {
     <Hero />
     <Partners />
     <FeaturesSection/>
+    <LiveDemoAndIntegrations />
+    <ReviewsSection />
+    <PricingSection />
     {/* Add more components as needed */}
     </>
   );
