@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply bg-background text-primary;
+}
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }

@@ -1,16 +1,29 @@
 // src/Navbar.jsx
-import React from "react";
+import React, { use } from "react";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(useGSAP);
+
+
 
 const Navbar = () => {
+  useGSAP(() => {
+  gsap.from('nav', {
+    duration: 1,
+    y: -30,
+    opacity: 0,
+    // ease: 'power2.out',
+  });
+});
   return (
-    <nav className="flex justify-between items-center py-6 px-6 md:px-20 bg-white shadow-sm rounded-xl">
+    <nav className="flex justify-between items-center py-6 px-6 md:px-20 bg-background shadow-sm rounded-xl">
       {/* Left: Logo */}
       <div className="text-2xl font-bold">
-        <span className="inline-block w-8 h-8 rounded-full bg-black text-white flex items-center justify-center">▶️</span>
+        <span className=" w-8 h-8 rounded-full bg-black text-accent flex items-center justify-center">TECHORA</span>
       </div>
 
       {/* Center: Menu */}
-      <div className="hidden md:flex gap-8 text-sm font-medium text-gray-800">
+      <div className="hidden md:flex gap-8 text-sm font-medium text-primary">
         <a href="#">Features</a>
         <a href="#">How It Works</a>
         <a href="#">Pricing</a>

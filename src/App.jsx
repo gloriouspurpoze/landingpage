@@ -9,11 +9,20 @@ import ReviewsSection from "./components/Reviews";
 import PricingSection from "./components/Pricing";
 import FAQSection from "./components/Faq";
 import CTASection from "./components/CTA";
+import AnimatedHeadline from "./components/AnimatedHeadline";
+
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(useGSAP);
+
+
 const App = () => {
+
   return (
     <>
     <Navbar />
-    <Hero />
+    <AnimatedHeadline />
+    {/* <Hero /> */}
     <Partners />
     <FeaturesSection/>
     <LiveDemoAndIntegrations />

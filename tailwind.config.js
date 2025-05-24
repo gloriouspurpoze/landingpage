@@ -15,6 +15,14 @@ export default {
     animation: {
       scroll: 'scroll 20s linear infinite',
     },
+    colors: {
+        background: '#0D1310',
+        accent: '#3EB489',
+        primary: '#EEE7DC',
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], // or whatever font you picked
+      }
   },
   },
   plugins: [],
