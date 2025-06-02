@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Partners from "./components/Partners";
-import FeaturesSection from "./components/FeaturesSection";
+import OurExpertise from "./components/FeaturesSection";
 import LiveDemoAndIntegrations from "./components/DemoAndIntegrations";
 import ReviewsSection from "./components/Reviews";
 import PricingSection from "./components/Pricing";
@@ -13,6 +13,7 @@ import AnimatedHeadline from "./components/AnimatedHeadline";
 // import CircularImageSection from "./components/Hro";
 import WaveImage from "./components/WaveImage";
 import HowWeHelp from "./components/HowWeHelp";
+import Works from "./components/Works";
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -28,6 +29,7 @@ const App = () => {
       <WaveImage />
       
       <HowWeHelp />
+      
       <div className="relative ">
         
       </div>
@@ -35,8 +37,10 @@ const App = () => {
       {/* <Hero /> */}
 
       {/* <CircularImageSection /> */}
-      <Partners />
-      <FeaturesSection />
+      {/* <Partners /> */}
+      <OurExpertise />
+      <Partners /> 
+      <Works />
       <LiveDemoAndIntegrations />
       <ReviewsSection />
       <PricingSection />
