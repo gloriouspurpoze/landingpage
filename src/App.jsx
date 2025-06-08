@@ -16,9 +16,12 @@ import WaveImage from "./components/WaveImage";
 import HowWeHelp from "./components/HowWeHelp";
 import Works from "./components/Works";
 import WhyChooseUs from "./components/WhyChooseUs";
+import ContactSection from "./components/ContactUs2";
+// import Footer from "./components/Footer";
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import Footer from "./components/Footer";
 gsap.registerPlugin(useGSAP);
 
 
@@ -51,7 +54,12 @@ const App = () => {
       {/* <ReviewsSection /> */}
       
       <FAQSection />
-      <CTASection />
+      <ContactSection />
+      <Footer />
+      {/* <PricingTable /> */}
+      {/* <PricingSplitView /> */}
+      {/* <FAQSection /> */}
+      {/* <CTASection /> */}
       {/* Add more components as needed */}
     </>
   );
