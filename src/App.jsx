@@ -6,7 +6,8 @@ import Partners from "./components/Partners";
 import OurExpertise from "./components/FeaturesSection";
 import LiveDemoAndIntegrations from "./components/DemoAndIntegrations";
 import ReviewsSection from "./components/Reviews";
-import PricingSection from "./components/Pricing";
+import PricingTable from "./components/Pricing";
+import PricingSplitView from "./components/Pricing2";
 import FAQSection from "./components/Faq";
 import CTASection from "./components/CTA";
 import AnimatedHeadline from "./components/AnimatedHeadline";
@@ -14,6 +15,7 @@ import AnimatedHeadline from "./components/AnimatedHeadline";
 import WaveImage from "./components/WaveImage";
 import HowWeHelp from "./components/HowWeHelp";
 import Works from "./components/Works";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -41,9 +43,13 @@ const App = () => {
       <OurExpertise />
       <Partners /> 
       <Works />
-      <LiveDemoAndIntegrations />
-      <ReviewsSection />
-      <PricingSection />
+      {/* <PricingTable /> */}
+      <PricingSplitView/>
+      <WhyChooseUs />
+
+      {/* <LiveDemoAndIntegrations /> */}
+      {/* <ReviewsSection /> */}
+      
       <FAQSection />
       <CTASection />
       {/* Add more components as needed */}
