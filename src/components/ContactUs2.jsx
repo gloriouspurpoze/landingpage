@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPaperPlane } from "react-icons/fa";
+// import { FaEnvelope, FaPaperPlane } from "react-icons/fa";
 
 const ContactSection = () => {
   return (
@@ -41,7 +41,7 @@ const ContactSection = () => {
             type="submit"
             className="bg-[#3EB489] hover:bg-[#2e9774] text-[#0D1310] font-semibold px-6 py-3 rounded-md flex items-center gap-2 transition-all duration-200"
           >
-            <FaPaperPlane className="text-lg" /> 
+            {/* <FaPaperPlane className="text-lg" />  */}
             Send Message
           </button>
         </form>
