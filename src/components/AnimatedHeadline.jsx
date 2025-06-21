@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
+gsap.registerPlugin(useGSAP);
 
 const phrases = ["Boost Sales", "Drive Growth", "Convert Visitors"];
 
@@ -7,6 +10,25 @@ export default function HeroHeading() {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+const heroRef1 = useRef();
+const heroRef2 = useRef();
+
+   useGSAP(() => {
+    gsap.from(heroRef1.current, {
+      x: -100,
+      opacity: 0,
+      duration: 2,
+      ease: "power3.out",
+    });
+    gsap.from(heroRef2.current, {
+      x: 100,
+      opacity: 0,
+      duration: 2,
+      ease: "power3.out",
+    });
+
+  },
+     []);
 
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex];
@@ -38,10 +60,10 @@ export default function HeroHeading() {
   }, [charIndex, isDeleting, phraseIndex]);
 
   return (
-    <section className="w-full bg-background text-primary px-6 lg:px-20 py-20 font-poppins">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-16">
+    <section  className="w-full bg-background text-primary px-6 lg:px-20 py-20 font-poppins">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-16">
         {/* Left Side - Heading */}
-        <div className="lg:w-2/3">
+        <div className="lg:w-2/3" ref={heroRef1}>
           <h1 className="text-[2.5rem] md:text-[4.5rem] font-sans font-bold text-4xl tracking-widest leading-tight text-left">
             <div className="mb-2">We Create Digital</div>
             <div className="mb-2">Experiences That</div>
@@ -53,7 +75,7 @@ export default function HeroHeading() {
         </div>
 
         {/* Right Side - Content */}
-        <div className="lg:w-1/3 flex flex-col gap-6">
+        <div className="lg:w-1/3 flex flex-col gap-6" ref={heroRef2}>
           <p className="text-lg text-primary/80 max-w-md md:mt-4 md:text-right tracking-wide leading-relaxed">
             Full-cycle web development & marketing solutions that deliver 3x ROI for ambitious businesses
           </p>
