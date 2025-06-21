@@ -18,7 +18,7 @@ const howWeHelpRef2 = useRef();
       ease: "power3.out",
       scrollTrigger: {
         trigger: howWeHelpRef1.current,
-        start: "top center",
+        start: "top 60%",
         toggleActions: "play none none reverse",
       },
     });

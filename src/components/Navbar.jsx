@@ -8,18 +8,22 @@ gsap.registerPlugin(useGSAP);
 
 const Navbar = () => {
   useGSAP(() => {
-  gsap.from('nav', {
-    duration: 1,
-    y: -30,
-    opacity: 0,
-    // ease: 'power2.out',
+    gsap.from('nav', {
+      duration: 1,
+      y: -30,
+      opacity: 0,
+      // ease: 'power2.out',
+    });
   });
-});
   return (
     <nav className="flex justify-between items-center py-6 px-6 md:px-20 bg-background shadow-sm rounded-xl">
       {/* Left: Logo */}
       <div className="text-2xl font-bold">
-        <span className=" w-8 h-8 rounded-full bg-black text-accent flex items-center justify-center">TECHORA</span>
+        {/* <span className=" w-8 h-8 rounded-full bg-black  text-accent flex items-center justify-center">TECHORA</span> */}
+        <div className="text-accent font-extrabold text-2xl tracking-wider">
+          TECHORA
+        </div>
+
       </div>
 
       {/* Center: Menu */}

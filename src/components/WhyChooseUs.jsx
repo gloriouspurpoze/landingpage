@@ -50,8 +50,8 @@ const WhyChooseUs = () => {
           It’s not just what we build — it’s how we build it. 🚧✨
         </p>
       </div>
-
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-16">
+        <div className="grid md:grid-cols-3 gap-8">
         {reasons.map((item, idx) => (
           <div
             key={idx}
@@ -67,6 +67,8 @@ const WhyChooseUs = () => {
           </div>
         ))}
       </div>
+      </div>
+      
     </section>
   );
 };
